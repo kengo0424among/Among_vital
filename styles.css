@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Source Han Sans JP';
+    src: url('https://fonts.gstatic.com/ea/sourcehansans/v2/TTF/SourceHanSansJP-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('C:/Users/tm090/Desktop/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Source Han Sans JP', 'VCR OSD Mono', Arial, sans-serif;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+}
+
+#header {
+    position: relative;
+}
+
+#simsong {
+    font-size: 20px; /* フォントサイズを大きくする */
+    color: white;
+    font-family: 'Arial Black', Arial, sans-serif; /* Arial Blackフォントを適用 */
+    white-space: nowrap; /* テキストが改行されずに横に伸びるようにする */
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: 'VCR OSD Mono', Arial, sans-serif; /* 英語部分にVCR OSD Monoを適用 */
+}
+
+#ecg-container, #update-form {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(0, 0, 139, 0.1);
+    border: 1px solid #ADD8E6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#update-form input, #update-form select, #update-form button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#ecg-container {
+    background: #000080;
+    border: 1px solid #ADD8E6;
+}
+
+canvas {
+    margin: 5px; /* マージンを小さくする */
+    height: 50px; /* キャンバスの高さを50pxに設定 */
+    width: 175px; /* キャンバスの幅を175pxに設定 */
+}
+
+#ecg-grids {
+    display: flex;
+    flex-wrap: wrap; /* フレックスアイテムが折り返して複数行に渡るようにする */
+}
+
+.ecg-grid {
+    display: flex;
+    align-items: center;
+    width: calc(33.33% - 10px); /* 3分割してマージンを調整 */
+    margin-bottom: 10px; /* 間隔を小さくする */
+    background-color: #2c3e50; /* 波形背景色 */
+    margin-right: 10px; /* 横間隔を追加 */
+}
+
+.player-image {
+    width: 50px; /* 画像の幅を50pxに設定 */
+    height: 50px; /* 画像の高さを50pxに設定 */
+    object-fit: contain; /* 縦横比を維持しつつ、指定したサイズに合わせる */
+    margin-right: 10px;
+}
+
+.status {
+    font-size: 16px; /* フォントサイズを小さくする */
+    color: white;
+    margin-left: 10px;
+    white-space: pre; /* 改行を保持 */
+}
+
+.alive {
+    background-color: rgba(0, 128, 0, 0.5); /* 生存時の背景色を濃い緑に */
+    color: lightgreen; /* 生存時のテキスト色 */
+}
+
+.dead {
+    background-color: rgba(139, 0, 0, 0.5); /* 死亡時の背景色を濃い赤に */
+    color: lightcoral; /* 死亡時のテキスト色 */
+}
+
+.dc {
+    background-color: rgba(128, 128, 128, 0.5); /* D/C時の背景色を濃い灰色に */
+    color: lightgray; /* D/C時のテキスト色 */
+}
+
+#simsong-container {
+    margin-top: 20px;
+}

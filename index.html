@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among Us 生死確認サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Among Us 生死確認サイト</h1>
+    </div>
+    <div id="update-form">
+        <h2>プレイヤーを追加</h2>
+        <form id="player-form">
+            <input type="text" id="player-name" placeholder="プレイヤー名">
+            <select id="player-color" onchange="updateSkinOptions()">
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Cyan">Cyan (Light Blue)</option>
+                <option value="Lime">Lime (Light Green)</option>
+                <option value="Brown">Brown</option>
+                <option value="Pink">Pink</option>
+                <option value="Orange">Orange</option>
+                <option value="Purple">Purple</option>
+                <option value="Rose">Rose</option>
+                <option value="Banana">Banana</option>
+                <option value="Coral">Coral</option>
+                <option value="Gray">Gray</option>
+                <option value="Maroon">Maroon</option>
+            </select>
+            <select id="player-status">
+                <option value="alive">生存</option>
+                <option value="dead">死亡</option>
+                <option value="dc">D/C</option>
+            </select>
+            <button type="submit">追加</button>
+        </form>
+    </div>
+    <div id="ecg-container">
+        <h2>心電図</h2>
+        <div id="ecg-grids">
+            <!-- 心電図グリッドがここに表示されます -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
